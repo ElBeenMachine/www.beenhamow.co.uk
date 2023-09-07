@@ -11,7 +11,7 @@ const Projects = [
     },
     {
         name: "My Portfolio",
-        url: "https://www/github.com/ElBeenMachine/my-portfolio",
+        url: "https://www.github.com/ElBeenMachine/my-portfolio",
         technologies: ["NodeJS", "NextJS", "Vercel", "Tailwind CSS", "APIs"],
     },
     {

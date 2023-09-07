@@ -25,7 +25,9 @@ function ProjectCard({
             >
                 {technologies.map((tech) => (
                     <p
-                        className={"py-2 px-3 bg-black/70 rounded-full mx-3"}
+                        className={
+                            "py-2 px-3 my-2 bg-black/70 rounded-full mx-3"
+                        }
                         key={tech}
                     >
                         {tech}
