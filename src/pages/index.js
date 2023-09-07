@@ -7,7 +7,7 @@ export default function Home() {
     return (
         <Layout title="Ollie B">
             <Navbar />
-            <div className={"mx-10 px-6"}>
+            <div className={"mx-10 md:px-6"}>
                 <Hero />
                 <FeaturedProjects />
             </div>
