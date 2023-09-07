@@ -5,7 +5,9 @@ function HeroSide({ children }) {
 function TagLine() {
     return (
         <div className={"flex flex-col"}>
-            <h1 className={"text-5xl font-semibold pb-10"}>Hi! I'm Ollie</h1>
+            <h1 className={"text-4xl md:text-5xl font-semibold pb-10"}>
+                Hi! I'm Ollie
+            </h1>
             <p className={"pb-10 max-w-2xl"}>
                 I'm a UK-based university student studying software engineering,
                 with a strong interest in web development and networking.
