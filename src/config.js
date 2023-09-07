@@ -16,16 +16,8 @@ const Projects = [
     },
     {
         name: "Photo Gallery",
-        url: "https://photos.beenhamow.co.uk",
-        technologies: [
-            "MongoDB",
-            "NodeJS",
-            "NextJS",
-            "APIs",
-            "AWS S3",
-            "Image Manipulation",
-            "CDNs",
-        ],
+        url: "https://photos.beenhamow.co.uk/auth/login",
+        technologies: ["MongoDB", "NodeJS", "NextJS", "APIs", "AWS S3", "CDNs"],
     },
 ];
 
