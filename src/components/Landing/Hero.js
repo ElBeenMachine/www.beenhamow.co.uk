@@ -42,6 +42,7 @@ function Hero() {
                     }
                 >
                     <img
+                        alt={"Hero Image"}
                         className={"w-full max-w-xl animate-float"}
                         src={"/img/landing/hero.svg"}
                     />
