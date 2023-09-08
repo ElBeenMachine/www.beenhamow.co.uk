@@ -11,6 +11,7 @@ function TechCard({ name = "Untitled Technlogy", image }) {
                 }
             >
                 <img
+                    alt={name}
                     src={image}
                     className={
                         "w-full rounded-md h-auto object-contain object-center aspect-square transition-all"

@@ -13,6 +13,7 @@ function ProjectCard({
         >
             <h2 className={"text-2xl pb-3"}>{name}</h2>
             <img
+                alt={name}
                 src={thumb}
                 className={
                     "w-full rounded-md h-auto object-cover object-center transition-all hover:opacity-80 cursor-pointer aspect-video bg-white"
