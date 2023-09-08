@@ -1,16 +1,12 @@
 import { Projects } from "@/config";
 import ProjectCard from "@/components/Cards/ProjectCard";
 
-function FeaturedProjects() {
-    const data = Projects.filter((x) => {
-        return x.featured == true;
-    });
-
+function MyProjects() {
     return (
         <div className={"mb-16"}>
-            <h1 className={"text-4xl pb-5"}>Featured Projects</h1>
+            <h1 className={"text-4xl pb-5"}>My Projects</h1>
             <div className={"flex justify-start flex-wrap"}>
-                {data.map((project) => (
+                {Projects.map((project) => (
                     <ProjectCard
                         name={project.name}
                         technologies={project.technologies}
@@ -24,4 +20,4 @@ function FeaturedProjects() {
     );
 }
 
-export default FeaturedProjects;
+export default MyProjects;

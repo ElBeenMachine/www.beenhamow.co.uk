@@ -3,6 +3,7 @@ const Projects = [
         name: "Bean Bot",
         url: "https://www.github.com/ElBeenMachine/bean-bot",
         technologies: ["Docker", "FFMPEG", "NodeJS", "Discord.js", "APIs"],
+        featured: true,
     },
     {
         name: "472 Squadron Website",
@@ -13,11 +14,13 @@ const Projects = [
         name: "My Portfolio",
         url: "https://www.github.com/ElBeenMachine/my-portfolio",
         technologies: ["NodeJS", "NextJS", "Vercel", "Tailwind CSS", "APIs"],
+        featured: true,
     },
     {
         name: "Photo Gallery",
         url: "https://photos.beenhamow.co.uk/auth/login",
         technologies: ["MongoDB", "NodeJS", "NextJS", "APIs", "AWS S3", "CDNs"],
+        featured: true,
     },
 ];
 

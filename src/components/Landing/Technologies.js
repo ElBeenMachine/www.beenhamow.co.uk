@@ -8,7 +8,11 @@ function Technlolgies() {
             <h1 className={"text-4xl pb-5"}>My technologies</h1>
             <div className={"flex justify-start flex-wrap"}>
                 {data.map((tech) => (
-                    <TechCard name={tech.name} image={tech.image} />
+                    <TechCard
+                        key={tech.name}
+                        name={tech.name}
+                        image={tech.image}
+                    />
                 ))}
             </div>
         </div>
