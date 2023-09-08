@@ -3,7 +3,7 @@ import ProjectCard from "@/components/Cards/ProjectCard";
 
 function FeaturedProjects() {
     return (
-        <div>
+        <div className={"mb-16"}>
             <h1 className={"text-4xl pb-5"}>Featured Projects</h1>
             <div className={"flex justify-start flex-wrap"}>
                 {Projects.map((project) => (

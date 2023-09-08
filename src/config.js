@@ -21,4 +21,40 @@ const Projects = [
     },
 ];
 
+const Technologies = [
+    {
+        name: "CSS3",
+        image: "/img/icons/css.svg",
+    },
+    {
+        name: "HTML5",
+        image: "/img/icons/html.svg",
+    },
+    {
+        name: "MongoDB",
+        image: "/img/icons/mongodb.svg",
+    },
+    {
+        name: "NextJS",
+        image: "/img/icons/nextjs.svg",
+    },
+    {
+        name: "NodeJS",
+        image: "/img/icons/nodejs.svg",
+    },
+    {
+        name: "React",
+        image: "/img/icons/react.svg",
+    },
+    {
+        name: "VSCode",
+        image: "/img/icons/vscode.svg",
+    },
+    {
+        name: "JavaScript",
+        image: "/img/icons/js.svg",
+    },
+];
+
 exports.Projects = Projects;
+exports.Technologies = Technologies;
