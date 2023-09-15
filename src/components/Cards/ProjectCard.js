@@ -7,7 +7,7 @@ function ProjectCard({
     return (
         <div
             className={
-                "max-w-full lg:max-w-[calc(50%-20px)] xl:max-w-[calc(33%-20px)] flex flex-col pb-5 md:mr-5"
+                "max-w-full lg:max-w-[calc(50%-20px)] xl:max-w-[calc(33%-20px)] w-full flex flex-col pb-5 md:mr-5"
             }
             onClick={() => window.open(url, "_blank")}
         >
