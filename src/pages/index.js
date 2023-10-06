@@ -2,17 +2,24 @@ import { Inter } from "next/font/google";
 import PageLoader from "@/components/PageLoader";
 import Navigation from "@/components/NavBar";
 import Hero from "@/components/Hero";
+import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
     return (
-        <main>
-            <PageLoader />
-            <Navigation />
-            <div id={"page-content"} className={"mt-20 w-full px-64"}>
-                <Hero />
-            </div>
-        </main>
+        <>
+            <Head>
+                <link rel="icon" href="/img/logo.svg" />
+                <title>Ollie B | Portfolio</title>
+            </Head>
+            <main>
+                <PageLoader />
+                <Navigation />
+                <div id={"page-content"} className={"mt-20 w-full px-64"}>
+                    <Hero />
+                </div>
+            </main>
+        </>
     );
 }
