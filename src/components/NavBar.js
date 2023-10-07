@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+
 const links = [];
 
 function NavLink({ children, href, target = "_self" }) {
@@ -18,7 +20,7 @@ function Navigation() {
     return (
         <div
             className={
-                "h-20 w-full absolute flex justify-between items-center px-10 py-5 top-0"
+                "h-20 w-full relative flex justify-between items-center px-10 py-5 top-0"
             }
             id={"nav"}
         >
@@ -30,20 +32,18 @@ function Navigation() {
                 />
             </div>
             <div className={"flex-grow"} />
-            <div className={"h-full w-max flex justify-end"}>
-                <NavLink href={"#"}>
-                    <span className={"text-[#00ffff] mr-2"}>01.</span> About Me
+            <div className={"h-full w-max justify-end hidden md:flex"}>
+                <NavLink href={"/#about"}>
+                    <span className={"text-[#00ffff] mr-2"}>01.</span>About Me
                 </NavLink>
                 <NavLink href={"#"}>
-                    <span className={"text-[#00ffff] mr-2"}>02.</span>{" "}
-                    Experience
+                    <span className={"text-[#00ffff] mr-2"}>02.</span>Experience
                 </NavLink>
                 <NavLink href={"#"}>
-                    <span className={"text-[#00ffff] mr-2"}>03.</span> Projects
+                    <span className={"text-[#00ffff] mr-2"}>03.</span>Projects
                 </NavLink>
                 <NavLink href={"#"}>
-                    <span className={"text-[#00ffff] mr-2"}>04.</span> Contact
-                    Me
+                    <span className={"text-[#00ffff] mr-2"}>04.</span>Contact Me
                 </NavLink>
             </div>
         </div>
