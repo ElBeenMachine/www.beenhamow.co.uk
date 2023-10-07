@@ -37,7 +37,7 @@ function Hero() {
                     window.open("https://github.beenhamow.co.uk", "_blank")
                 }
                 className={
-                    "transition-all text-[#00ffff] font-semibold border rounded-md border-[#00ffff] px-8 py-4 hover:text-gray-100 hover:bg-[#00ffff] big-header"
+                    "transition-all text-[#00ffff] font-semibold border rounded-md border-[#00ffff] px-8 py-4 hover:text-[#303030] hover:bg-[#00ffff] big-header"
                 }
                 style={{ animationDelay: "4500ms" }}
             >
