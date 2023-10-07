@@ -19,7 +19,7 @@ export default function Home() {
                 <Navigation />
                 <div
                     id={"page-content"}
-                    className={"mt-20 w-full px-20 lg:px-96"}
+                    className={"mt-20 w-full px-20 lg:px-80"}
                 >
                     <Hero />
                     <AboutSection />
