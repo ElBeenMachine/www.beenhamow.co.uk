@@ -3,7 +3,7 @@ function PageLoader() {
         <div
             id={"page-loader"}
             className={
-                "w-full h-full flex justify-center items-center bg-[#303030] fixed top-0 left-0 z-50"
+                "w-full h-full flex justify-center items-center bg-[#0e1624] fixed top-0 left-0 z-50"
             }
         >
             <svg

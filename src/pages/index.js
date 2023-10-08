@@ -1,9 +1,9 @@
 import { Inter } from "next/font/google";
 import PageLoader from "@/components/PageLoader";
 import Navigation from "@/components/NavBar";
-import Hero from "@/components/Hero";
+import Hero from "@/components/Sections/Hero";
 import Head from "next/head";
-import AboutSection from "@/components/About";
+import AboutSection from "@/components/Sections/About";
 
 const inter = Inter({ subsets: ["latin"] });
 
