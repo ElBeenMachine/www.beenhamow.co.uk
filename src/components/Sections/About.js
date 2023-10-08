@@ -23,14 +23,13 @@ function AboutSection() {
                         Here are some of the technologies I use on a day-to-day
                         basis:
                     </p>
-                    <ul className={"flex flex-col flex-wrap max-h-10"}>
-                        <li>Test 1</li>
-                        <li>Test 1</li>
-                        <li>Test 1</li>
-                        <li>Test 1</li>
-                        <li>Test 1</li>
-                        <li>Test 1</li>
-                        <li>Test 1</li>
+                    <ul className={"flex flex-col flex-wrap max-h-20"}>
+                        <li>JavaScript</li>
+                        <li>Express</li>
+                        <li>React</li>
+                        <li>Next.js</li>
+                        <li>AWS</li>
+                        <li>MongoDB</li>
                     </ul>
                 </div>
                 <div className={"w-full lg:w-[50%]"}></div>
