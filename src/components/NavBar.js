@@ -36,7 +36,7 @@ function Navigation() {
                 <NavLink href={"/#about"}>
                     <span className={"text-[#00ffff] mr-2"}>01.</span>About Me
                 </NavLink>
-                <NavLink href={"#"}>
+                <NavLink href={"/#experience"}>
                     <span className={"text-[#00ffff] mr-2"}>02.</span>Experience
                 </NavLink>
                 <NavLink href={"#"}>

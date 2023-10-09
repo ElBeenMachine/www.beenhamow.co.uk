@@ -1,7 +1,7 @@
 import { useEffect } from "react";
-import SectionTitle from "./SectionTitle";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import CenteredSectionTitle from "./CenteredSectionTitle";
 
 const sectionVariants = {
     visible: { opacity: 1, scale: 1, y: 0, transition: { duration: 0.75 } },
@@ -31,7 +31,7 @@ function CenteredPageSection({ children, id, title, index }) {
                 "min-h-[calc(100vh-40px)] lg:max-w-[80%] overflow-x-hidden"
             }
         >
-            <CenteredPageSection title={title} index={index} />
+            <CenteredSectionTitle title={title} index={index} />
             {children}
         </motion.section>
     );
