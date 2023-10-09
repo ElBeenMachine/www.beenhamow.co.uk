@@ -198,12 +198,3 @@ body {
 .arrowList li::marker {
     color: #00ffff;
 }
-
-/* .arrowListItem::before {
-    content: "▹";
-    position: absolute;
-    left: 0px;
-    color: red;
-    font-size: var(14px);
-    line-height: 12px;
-} */
