@@ -176,16 +176,6 @@ body {
     margin-bottom: 50px;
 }
 
-.sectionHeader::after {
-    content: "";
-    position: absolute;
-    right: -475px;
-    top: 50%;
-    width: 450px;
-    height: 1px;
-    background: rgba(255, 255, 255, 0.25);
-}
-
 .arrowList {
     list-style: "➤";
     padding-inline-start: 20px;

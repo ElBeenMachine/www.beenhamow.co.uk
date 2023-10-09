@@ -27,7 +27,7 @@ function PageSection({ children, id, title, index }) {
             animate={controls}
             initial={"hidden"}
             id={id}
-            className={"min-h-screen py-32 overflow-x-hidden"}
+            className={"pt-24 mt-5 overflow-x-hidden"}
         >
             <SectionTitle title={title} index={index} />
             {children}

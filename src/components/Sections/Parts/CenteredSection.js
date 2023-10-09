@@ -27,9 +27,7 @@ function CenteredPageSection({ children, id, title, index }) {
             animate={controls}
             initial={"hidden"}
             id={id}
-            className={
-                "min-h-[calc(100vh-40px)] lg:max-w-[80%] overflow-x-hidden"
-            }
+            className={"pt-24 mt-5 max-w-[100%] lg:w-[80%] overflow-x-hidden"}
         >
             <CenteredSectionTitle title={title} index={index} />
             {children}

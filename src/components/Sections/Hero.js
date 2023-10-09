@@ -2,7 +2,7 @@ function Hero() {
     return (
         <div
             className={
-                "flex flex-col justify-center items-start h-[calc(100vh-240px)] mb-80"
+                "flex flex-col justify-center items-start h-[calc(100vh-80px)] w-full"
             }
         >
             <h3
