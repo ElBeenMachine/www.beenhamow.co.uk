@@ -185,3 +185,25 @@ body {
     height: 1px;
     background: rgba(255, 255, 255, 0.25);
 }
+
+.arrowList {
+    list-style: "➤";
+    padding-inline-start: 20px;
+}
+
+.arrowList li {
+    padding-left: 10px;
+}
+
+.arrowList li::marker {
+    color: #00ffff;
+}
+
+/* .arrowListItem::before {
+    content: "▹";
+    position: absolute;
+    left: 0px;
+    color: red;
+    font-size: var(14px);
+    line-height: 12px;
+} */

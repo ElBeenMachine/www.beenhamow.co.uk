@@ -23,7 +23,9 @@ function AboutSection() {
                         Here are some of the technologies I use on a day-to-day
                         basis:
                     </p>
-                    <ul className={"flex flex-col flex-wrap max-h-20"}>
+                    <ul
+                        className={"flex flex-col flex-wrap max-h-20 arrowList"}
+                    >
                         <li>JavaScript</li>
                         <li>Express</li>
                         <li>React</li>
