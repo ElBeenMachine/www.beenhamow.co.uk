@@ -4,7 +4,7 @@ import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 const sectionVariants = {
-    visible: { opacity: 1, scale: 1, y: 0, transition: { duration: 0.75 } },
+    visible: { opacity: 1, scale: 1, y: 0, transition: { duration: 1.25 } },
     hidden: { opacity: 0, scale: 0.95, y: 50 },
 };
 
@@ -27,7 +27,9 @@ function PageSection({ children, id, title, index }) {
             animate={controls}
             initial={"hidden"}
             id={id}
-            className={"pt-24 mt-5 overflow-x-hidden"}
+            className={
+                "mt-2 py-24 min-h-screen overflow-x-hidden flex flex-col justify-center"
+            }
         >
             <SectionTitle title={title} index={index} />
             {children}
