@@ -11,16 +11,13 @@ body {
     background-color: #0e1624;
     overflow-y: hidden;
     overflow-x: hidden;
-    -webkit-animation: enable-scroll 0.1s forwards;
     animation: enable-scroll 0.1s forwards;
     color: white;
     scroll-behavior: smooth;
 }
 
 #page-loader {
-    -webkit-animation: page-loaded 0.3s ease-in-out forwards;
     animation: page-loaded 0.3s ease-in-out forwards;
-    -webkit-animation-delay: 2.5s;
     animation-delay: 2.5s;
 }
 
@@ -28,9 +25,7 @@ body {
     width: 100px;
     height: 100px;
 
-    -webkit-animation: loaded 0.5s ease-in-out forwards;
     animation: loaded 0.5s ease-in-out forwards;
-    -webkit-animation-delay: 2s;
     animation-delay: 2s;
 }
 
@@ -40,9 +35,7 @@ body {
     font-size: 556.66px;
     font-weight: 700;
     opacity: 0;
-    -webkit-animation: letter 0.75s ease-in-out forwards;
     animation: letter 0.75s ease-in-out forwards;
-    -webkit-animation-delay: 0.75s;
     animation-delay: 0.75s;
 }
 
@@ -53,14 +46,7 @@ body {
     stroke-width: 60px;
     stroke-dasharray: 3000;
     stroke-dashoffset: 3000;
-    -webkit-animation: dash 0.75s ease-in-out forwards;
     animation: dash 0.75s ease-in-out forwards;
-}
-
-@-webkit-keyframes dash {
-    to {
-        stroke-dashoffset: 0;
-    }
 }
 
 @keyframes dash {
@@ -69,25 +55,9 @@ body {
     }
 }
 
-@-webkit-keyframes letter {
-    to {
-        opacity: 1;
-    }
-}
-
 @keyframes letter {
     to {
         opacity: 1;
-    }
-}
-
-@-webkit-keyframes loaded {
-    50% {
-        transform: scale(1.2);
-    }
-
-    100% {
-        transform: scale(0);
     }
 }
 
@@ -101,21 +71,9 @@ body {
     }
 }
 
-@-webkit-keyframes enable-scroll {
-    to {
-        overflow-y: auto;
-    }
-}
-
 @keyframes enable-scroll {
     to {
         overflow-y: auto;
-    }
-}
-
-@-webkit-keyframes page-loaded {
-    to {
-        display: none;
     }
 }
 
@@ -126,19 +84,10 @@ body {
 }
 
 #nav {
-    -webkit-animation: nav-drop-in 1.5s ease-in-out forwards;
     animation: nav-drop-in 1.5s ease-in-out forwards;
-    -webkit-animation-delay: 2s;
     animation-delay: 2s;
     transform: translateY(-80px) scale(0.95);
     opacity: 0;
-}
-
-@-webkit-keyframes nav-drop-in {
-    to {
-        transform: translateY(0) scale(1);
-        opacity: 1;
-    }
 }
 
 @keyframes nav-drop-in {
@@ -151,15 +100,7 @@ body {
 .big-header {
     transform: translateY(40px);
     opacity: 0;
-    -webkit-animation: fade-in-up 1s ease-in-out forwards;
     animation: fade-in-up 1s ease-in-out forwards;
-}
-
-@-webkit-keyframes fade-in-up {
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
 }
 
 @keyframes fade-in-up {
