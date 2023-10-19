@@ -1,6 +1,28 @@
+import react, { useEffect, useState } from "react";
+
+const Expire = ({ id, className, delay, children }) => {
+    const [visible, setVisible] = useState(true);
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setVisible(false);
+        }, delay);
+        return () => clearTimeout(timer);
+    }, [delay]);
+
+    return visible ? (
+        <div id={id} className={className}>
+            {children}
+        </div>
+    ) : (
+        <div />
+    );
+};
+
 function PageLoader() {
     return (
-        <div
+        <Expire
+            delay={2500}
             id={"page-loader"}
             className={
                 "w-full h-full flex justify-center items-center bg-[#0e1624] fixed top-0 left-0 z-50"
@@ -27,7 +49,7 @@ function PageLoader() {
                     />
                 </g>
             </svg>
-        </div>
+        </Expire>
     );
 }
 
