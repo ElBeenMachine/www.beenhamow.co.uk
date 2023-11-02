@@ -17,12 +17,13 @@ function ProjectsSection() {
         >
             {Projects.map((project, index) => (
                 <ProjectCard
+                    key={project.title}
                     title={project.title}
                     description={project.description}
                     technologies={project.technologies}
                     image={project.image}
                     href={project.href}
-                    inverted={index % 2 === 0}
+                    inverted={index % 2 !== 0}
                 />
             ))}
         </CenteredPageSection>

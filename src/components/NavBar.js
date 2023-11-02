@@ -20,7 +20,7 @@ function Navigation() {
     return (
         <div
             className={
-                "h-20 w-full relative flex justify-between items-center px-10 py-5 top-0"
+                "h-20 w-full relative flex justify-center md:justify-between items-center px-10 py-5 top-0"
             }
             id={"nav"}
         >
@@ -31,7 +31,6 @@ function Navigation() {
                     alt={"logo"}
                 />
             </div>
-            <div className={"flex-grow"} />
             <div className={"h-full w-max justify-end hidden md:flex"}>
                 <NavLink href={"/#about"}>
                     <span className={"text-[#00ffff] mr-2"}>01.</span>About Me
@@ -39,12 +38,9 @@ function Navigation() {
                 <NavLink href={"/#featured-projects"}>
                     <span className={"text-[#00ffff] mr-2"}>02.</span>Projects
                 </NavLink>
-                <NavLink href={"/#experience"}>
-                    <span className={"text-[#00ffff] mr-2"}>03.</span>Experience
-                </NavLink>
-                <NavLink href={"/#contact"}>
-                    <span className={"text-[#00ffff] mr-2"}>04.</span>Contact Me
-                </NavLink>
+                {/* <NavLink href={"/#contact"}>
+                    <span className={"text-[#00ffff] mr-2"}>03.</span>Contact Me
+                </NavLink> */}
             </div>
         </div>
     );

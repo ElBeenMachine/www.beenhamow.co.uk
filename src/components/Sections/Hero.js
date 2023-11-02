@@ -12,13 +12,17 @@ function Hero() {
                 Hi, my name is
             </h3>
             <h1
-                className={"text-gray-50 font-black text-7xl mb-2 big-header"}
+                className={
+                    "text-gray-50 font-black text-5xl lg:text-7xl mb-2 big-header"
+                }
                 style={{ animationDelay: "3200ms" }}
             >
                 Ollie.
             </h1>
             <h2
-                className={"text-gray-300 font-black text-5xl mb-8 big-header"}
+                className={
+                    "text-gray-300 font-black text-2xl lg:text-5xl mb-8 big-header"
+                }
                 style={{ animationDelay: "3300ms" }}
             >
                 I build things for the web.

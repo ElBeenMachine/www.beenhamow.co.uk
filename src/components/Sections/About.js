@@ -34,7 +34,12 @@ function AboutSection() {
                         <li>MongoDB</li>
                     </ul>
                 </div>
-                <div className={"w-full lg:w-[50%]"}></div>
+                <div className={"w-full lg:w-[50%]"}>
+                    <img
+                        src="/img/about.svg"
+                        className={"hidden lg:block w-full p-10"}
+                    />
+                </div>
             </div>
         </PageSection>
     );

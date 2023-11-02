@@ -3,12 +3,12 @@ import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 
 const sectionVariants = {
-    visible: { opacity: 1, x: 0, transition: { duration: 0.5 } },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.5, delay: 0.25 } },
     hidden: { opacity: 0, x: 50 },
 };
 
 const invertedVariants = {
-    visible: { opacity: 1, x: 0, transition: { duration: 0.5 } },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.5, delay: 0.25 } },
     hidden: { opacity: 0, x: -50 },
 };
 
@@ -37,7 +37,7 @@ function ProjectCard({
             variants={inverted ? invertedVariants : sectionVariants}
             animate={controls}
             initial={"hidden"}
-            className={`h-full w-full overflow-x-hidden block relative my-20 overflow-hidden xl:flex justify-between items-center ${
+            className={`h-full w-full overflow-x-hidden block relative my-10 overflow-hidden xl:flex justify-between items-center ${
                 inverted
                     ? " text-right flex-row-reverse"
                     : " text-left flex-row"
@@ -60,7 +60,7 @@ function ProjectCard({
                     {description}
                 </p>
                 <p className={"whitespace-pre-wrap mt-3 opacity-50"}>
-                    {technologies.join("      ")}
+                    {technologies.join("     ")}
                 </p>
             </div>
             <div

@@ -21,7 +21,7 @@ export default function Home() {
                 <div
                     id={"page-content"}
                     className={
-                        "w-full px-20 2xl:px-80 flex flex-col items-center justify-center"
+                        "w-full px-5 md:px-40 2xl:px-80 flex flex-col items-center justify-center"
                     }
                 >
                     <Hero />
