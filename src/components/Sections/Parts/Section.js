@@ -28,7 +28,7 @@ function PageSection({ children, id, title, index }) {
             initial={"hidden"}
             id={id}
             className={
-                "mt-2 py-24 min-h-screen overflow-x-hidden flex flex-col justify-center"
+                "mt-2 py-24 w-full min-h-screen overflow-x-hidden flex flex-col justify-center"
             }
         >
             <SectionTitle title={title} index={index} />

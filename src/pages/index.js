@@ -4,7 +4,7 @@ import Navigation from "@/components/NavBar";
 import Hero from "@/components/Sections/Hero";
 import Head from "next/head";
 import AboutSection from "@/components/Sections/About";
-import ExperienceSection from "@/components/Sections/Experience";
+import ProjectsSection from "@/components/Sections/Projects/Projects";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,12 +21,12 @@ export default function Home() {
                 <div
                     id={"page-content"}
                     className={
-                        "w-full px-20 xl:px-80 flex flex-col items-center justify-center"
+                        "w-full px-20 2xl:px-80 flex flex-col items-center justify-center"
                     }
                 >
                     <Hero />
                     <AboutSection />
-                    <ExperienceSection />
+                    <ProjectsSection />
                 </div>
             </main>
         </>

@@ -36,13 +36,13 @@ function Navigation() {
                 <NavLink href={"/#about"}>
                     <span className={"text-[#00ffff] mr-2"}>01.</span>About Me
                 </NavLink>
+                <NavLink href={"/#featured-projects"}>
+                    <span className={"text-[#00ffff] mr-2"}>02.</span>Projects
+                </NavLink>
                 <NavLink href={"/#experience"}>
-                    <span className={"text-[#00ffff] mr-2"}>02.</span>Experience
+                    <span className={"text-[#00ffff] mr-2"}>03.</span>Experience
                 </NavLink>
-                <NavLink href={"#"}>
-                    <span className={"text-[#00ffff] mr-2"}>03.</span>Projects
-                </NavLink>
-                <NavLink href={"#"}>
+                <NavLink href={"/#contact"}>
                     <span className={"text-[#00ffff] mr-2"}>04.</span>Contact Me
                 </NavLink>
             </div>
