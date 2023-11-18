@@ -7,8 +7,6 @@ function ProjectsSection() {
         return x.featured == true;
     });
 
-    console.log(projects);
-
     return (
         <CenteredPageSection
             id={"featured-projects"}
