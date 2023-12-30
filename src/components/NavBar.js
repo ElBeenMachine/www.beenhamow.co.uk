@@ -1,7 +1,3 @@
-import { useEffect, useState } from "react";
-
-const links = [];
-
 function NavLink({ children, href, target = "_self" }) {
     return (
         <a
@@ -38,9 +34,12 @@ function Navigation() {
                 <NavLink href={"/#featured-projects"}>
                     <span className={"text-[#00ffff] mr-2"}>02.</span>Projects
                 </NavLink>
-                {/* <NavLink href={"/#contact"}>
+                <NavLink href={"/#contact"}>
                     <span className={"text-[#00ffff] mr-2"}>03.</span>Contact Me
-                </NavLink> */}
+                </NavLink>
+                <NavLink href={"https://blog.beenhamow.co.uk"} target="_blank">
+                    <span className={"text-[#00ffff] mr-2"}>04.</span>Blog
+                </NavLink>
             </div>
         </div>
     );
