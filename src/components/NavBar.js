@@ -41,6 +41,9 @@ function Navigation() {
                 {/* <NavLink href={"/#contact"}>
                     <span className={"text-[#00ffff] mr-2"}>03.</span>Contact Me
                 </NavLink> */}
+                <NavLink href={"https://blog.beenhamow.co.uk"} target="_blank">
+                    <span className={"text-[#00ffff] mr-2"}>04.</span>Blog
+                </NavLink>
             </div>
         </div>
     );
