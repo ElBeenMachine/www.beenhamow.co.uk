@@ -22,7 +22,7 @@ jobs:
               run: |
                   VERSION=$(node -p "require('./package.json').version")
                   docker build -t beenhamo/www.beenhamow.co.uk:$VERSION .
-                  docker tag beenhamo/uptime-monitor:$VERSION beenhamo/www.beenhamow.co.uk:latest
+                  docker tag beenhamo/www.beenhamow.co.uk:$VERSION beenhamo/www.beenhamow.co.uk:latest
 
             - name: Push Docker images
               run: |

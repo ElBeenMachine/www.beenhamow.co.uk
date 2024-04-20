@@ -24,4 +24,4 @@ jobs:
 
             - name: Push Docker images
               run: |
-                  docker push beenhamo/www.beenhamow.co.uk:latest
+                  docker push beenhamo/www.beenhamow.co.uk:beta
