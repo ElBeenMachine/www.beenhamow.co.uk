@@ -1,9 +1,9 @@
 const projects = [
     {
         title: "Uptime Monitor",
-        description: ``,
+        description: `Uptime Monitor is an ongoing project that I use to monitor the uptime of my personal projects. It is built using Next.js and is deployed using Docker. This project has allowed me to gain experience with CI/CD pipelines and the use of Docker in a production environment.`,
         technologies: ["Next.js", "Docker", "HTML", "CSS", "JavaScript", "CI/CD"],
-        image: "/img/projects/cadets-site.png",
+        image: "https://opengraph.githubassets.com/e80a501c76c941970a3fb7ab34ff714074313db116e8129c66b00a8ae8354b4b/ElBeenMachine/uptime-monitor",
         href: "https://github.beenhamow.co.uk/uptime-monitor",
         featured: true,
     },
