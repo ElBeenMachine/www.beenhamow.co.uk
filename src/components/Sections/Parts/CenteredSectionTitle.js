@@ -1,3 +1,7 @@
+/**
+ * @author @ElBeenMachine
+ */
+
 function CenteredSectionTitle({ index, title }) {
     return (
         <h1

@@ -1,3 +1,7 @@
+/**
+ * @author @ElBeenMachine
+ */
+
 import Head from "next/head";
 import Navigation from "./NavBar";
 import { useRouter } from "next/router";

@@ -1,3 +1,7 @@
+/**
+ * @author @ElBeenMachine
+ */
+
 import CenteredPageSection from "../Parts/CenteredSection";
 import ProjectCard from "./ProjectCard";
 import projects from "@/projects";

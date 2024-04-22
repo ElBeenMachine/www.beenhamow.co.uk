@@ -1,3 +1,7 @@
+/**
+ * @author @ElBeenMachine
+ */
+
 function NavLink({ children, href, target = "_self" }) {
     return (
         <a href={href} target={target} className={"h-full w-auto ml-4 flex items-center transition-all hover:text-[#00ffff]"}>

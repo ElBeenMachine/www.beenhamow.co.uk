@@ -1,3 +1,7 @@
+/**
+ * @author @ElBeenMachine
+ */
+
 import { useEffect } from "react";
 import SectionTitle from "./SectionTitle";
 import { motion, useAnimation } from "framer-motion";
