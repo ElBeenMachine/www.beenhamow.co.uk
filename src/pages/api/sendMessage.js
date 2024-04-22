@@ -33,7 +33,6 @@ export default async (req, res) => {
         const from = "no-reply@mail.beenhamow.co.uk";
 
         // Get the form data
-        console.log(JSON.parse(req.body));
         const { name, email, message } = JSON.parse(req.body);
 
         // Send the necessary emails
