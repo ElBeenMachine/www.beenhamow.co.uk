@@ -6,7 +6,25 @@ const sgMail = require("@sendgrid/mail");
 sgMail.setApiKey(process.env.SENDGRID_KEY);
 
 // Send confirmation email to user
-function sendConfirmationEmail(from, name, to) {}
+function sendConfirmationEmail(from, name, to) {
+    const msg = {
+        to,
+        from: {
+            email: from,
+            name: "Website Enquiries",
+        },
+        subject: "Thank you for your message",
+        html: `
+            <p>Hi ${name.split(" ")[0]},</br></p>
+            <p>Thank you for your message.<br /></p>
+            <p>Please be assured that I have received it and will endeavour to get back to you as soon as possible.<br /></p>
+            <p>Kind regards,</p>
+            <p>Ollie B</p>
+        `,
+    };
+
+    return sgMail.send(msg);
+}
 
 // Send message to owner
 function sendToOwner(from, replyTo, name, message) {
@@ -14,7 +32,10 @@ function sendToOwner(from, replyTo, name, message) {
 
     const msg = {
         to,
-        from,
+        from: {
+            email: from,
+            name: "Website Enquiries",
+        },
         replyTo,
         subject: "New Form Submission",
         html: `
