@@ -9,6 +9,7 @@ import Head from "next/head";
 import AboutSection from "@/components/Sections/About";
 import ProjectsSection from "@/components/Sections/Projects/Projects";
 import ContactForm from "@/components/Sections/ContactForm";
+import Footer from "@/components/Footer";
 
 export default function Home() {
     return (
@@ -25,6 +26,7 @@ export default function Home() {
                     <AboutSection />
                     <ProjectsSection />
                     <ContactForm />
+                    <Footer />
                 </div>
             </main>
         </>
