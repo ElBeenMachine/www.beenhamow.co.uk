@@ -78,7 +78,7 @@ function ContactForm() {
                         <label htmlFor={"message"}>Message</label>
                         <textarea
                             autoComplete="off"
-                            className={"w-full px-3 py-2 mt-2 rounded-md outline-none bg-[#0e1624] border-2 border-solid border-[#00ffff] focus:border-[#00ffff]"}
+                            className={"w-full px-3 py-2 mt-2 rounded-md outline-none bg-[#0e1624] border-2 border-solid border-[#00ffff] focus:border-[#00ffff] h-60"}
                             id={"message"}
                             name={"message"}
                             required={true}
