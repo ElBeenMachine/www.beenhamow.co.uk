@@ -1,3 +1,7 @@
+/**
+ * @author @ElBeenMachine
+ */
+
 import react, { useEffect, useState } from "react";
 
 const Expire = ({ id, className, delay, children }) => {

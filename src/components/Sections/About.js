@@ -1,3 +1,7 @@
+/**
+ * @author @ElBeenMachine
+ */
+
 import PageSection from "./Parts/Section";
 
 function AboutSection() {

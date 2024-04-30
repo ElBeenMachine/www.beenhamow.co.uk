@@ -1,3 +1,7 @@
+/**
+ * @author @ElBeenMachine
+ */
+
 import ErrorPage from "@/components/ErrorPage";
 
 function Error({ statusCode }) {

@@ -1,9 +1,15 @@
+/**
+ * @author @ElBeenMachine
+ */
+
 import PageLoader from "@/components/PageLoader";
 import Navigation from "@/components/NavBar";
 import Hero from "@/components/Sections/Hero";
 import Head from "next/head";
 import AboutSection from "@/components/Sections/About";
 import ProjectsSection from "@/components/Sections/Projects/Projects";
+import ContactForm from "@/components/Sections/ContactForm";
+import Footer from "@/components/Footer";
 
 export default function Home() {
     return (
@@ -15,15 +21,12 @@ export default function Home() {
             <main>
                 <PageLoader />
                 <Navigation />
-                <div
-                    id={"page-content"}
-                    className={
-                        "w-full px-5 md:px-40 2xl:px-80 flex flex-col items-center justify-center"
-                    }
-                >
+                <div id={"page-content"} className={"w-full px-5 md:px-40 2xl:px-80 flex flex-col items-center justify-center"}>
                     <Hero />
                     <AboutSection />
                     <ProjectsSection />
+                    <ContactForm />
+                    <Footer />
                 </div>
             </main>
         </>

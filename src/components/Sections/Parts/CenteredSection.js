@@ -1,3 +1,7 @@
+/**
+ * @author @ElBeenMachine
+ */
+
 import { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
@@ -27,9 +31,7 @@ function CenteredPageSection({ children, id, title, index }) {
             animate={controls}
             initial={"hidden"}
             id={id}
-            className={
-                "mt-2 py-24 min-h-screen flex flex-col justify-center w-full max-w-[100%] lg:w-[80%] overflow-x-hidden"
-            }
+            className={"mt-2 py-24 min-h-screen flex flex-col justify-center w-full max-w-[100%] lg:w-[80%] overflow-x-hidden"}
         >
             <CenteredSectionTitle title={title} index={index} />
             {children}

@@ -1,3 +1,7 @@
+/**
+ * @author @ElBeenMachine
+ */
+
 function SectionTitle({ index, title }) {
     return (
         <h1 className={"sectionHeader text-gray-200 my-5"}>

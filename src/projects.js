@@ -1,3 +1,7 @@
+/**
+ * @author @ElBeenMachine
+ */
+
 const projects = [
     {
         title: "Uptime Monitor",
