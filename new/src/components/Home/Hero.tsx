@@ -3,7 +3,7 @@ import Container from "../Layout/Container";
 export default function Hero() {
     return (
         <Container>
-            <div className={"flex flex-col justify-center items-start h-[calc(100dvh-80px)] w-full"}>
+            <div className={"flex flex-col justify-center items-start h-[calc(100dvh-80px)] w-full select-none"}>
                 <h3 className={"text-[#00ffff] font-bold text-lg mb-5 big-header"} style={{ animationDelay: "3100ms" }}>
                     Hi, my name is
                 </h3>
