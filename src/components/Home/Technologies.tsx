@@ -3,8 +3,8 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Container from "../Layout/Container";
 
 import { IoLogoJavascript } from "react-icons/io5";
-import { BiLogoTypescript } from "react-icons/bi";
-import { SiExpress, SiMicrosoftazure } from "react-icons/si";
+import { BiLogoTypescript, BiLogoMongodb } from "react-icons/bi";
+import { SiExpress, SiMicrosoftazure, SiMicrosoftexchange, SiGoogleappsscript } from "react-icons/si";
 import { RiNextjsFill } from "react-icons/ri";
 import { FaJava, FaReact, FaPython } from "react-icons/fa";
 import { GrDocker } from "react-icons/gr";
@@ -21,9 +21,14 @@ const technologies = [
         { name: "Express", icon: SiExpress, color: "#FFFFFF" },
     ],
     [
-        { name: "Azure", icon: SiMicrosoftazure, color: "#3178C6" },
+        { name: "Azure", icon: SiMicrosoftazure, color: "#0078d4" },
         { name: "Python", icon: FaPython, color: "#FFD343" },
         { name: "Docker", icon: GrDocker, color: "#1D63ED" },
+    ],
+    [
+        { name: "MongoDB", icon: BiLogoMongodb, color: "#00ED64" },
+        { name: "Exchange", icon: SiMicrosoftexchange, color: "#0078d4" },
+        { name: "Google Apps Script", icon: SiGoogleappsscript, color: "#0F9D58" },
     ],
 ];
 
@@ -33,11 +38,9 @@ function TechnologyCarousel() {
             {technologies.map((stack, index) => (
                 <div key={index} className="w-full h-max flex justify-center items-center py-5 select-none flex-wrap md:flex-nowrap">
                     {stack.map((tech, index) => (
-                        <div className="h-52 md:h-80 w-full text-center items-center justify-center flex flex-col gap-5 mx-5">
+                        <div key={index} className="h-52 md:h-80 w-full text-center items-center justify-center flex flex-col gap-5 mx-5">
                             {tech.icon && <tech.icon size={100} color={tech.color} />}
-                            <p key={index} className="text-2xl font-bold">
-                                {tech.name}
-                            </p>
+                            <p className="text-2xl font-bold">{tech.name}</p>
                         </div>
                     ))}
                 </div>
