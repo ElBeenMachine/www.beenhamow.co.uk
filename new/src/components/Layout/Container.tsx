@@ -12,7 +12,7 @@ interface ContainerProps {
 export default function Container({ children, width = "partial" }: ContainerProps) {
     return (
         <div className="w-full flex justify-center">
-            <div className={`px-10 ${width === "full" ? "w-full" : "w-4/5"}`}>{children}</div>
+            <div className={`px-10 ${width === "full" ? "w-full" : "w-full md:w-4/5"}`}>{children}</div>
         </div>
     );
 }

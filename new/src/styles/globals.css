@@ -7,4 +7,36 @@ html {
     background-color: theme(colors[background-primary]);
     color: theme(colors[white]);
     min-height: 100dvh;
+    scroll-behavior: smooth;
+}
+
+.big-header {
+    transform: translateY(40px);
+    opacity: 0;
+    animation: fade-in-up 1s ease-in-out forwards;
+}
+
+@keyframes fade-in-up {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.arrowList {
+    list-style: "➤";
+    padding-inline-start: 20px;
+}
+
+.arrowList {
+    list-style: "➤";
+    padding-inline-start: 20px;
+}
+
+.arrowList li {
+    padding-left: 10px;
+}
+
+.arrowList li::marker {
+    color: #00ffff;
 }

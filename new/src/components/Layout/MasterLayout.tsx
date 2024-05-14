@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Navbar from "./NavBar";
+import Footer from "./Footer";
 
 interface LayoutProps {
     children?: React.ReactNode;
@@ -47,6 +48,7 @@ export default function Layout({ children, pageTitle, pageDescription, pageImage
             </Head>
             <Navbar />
             <main>{children}</main>
+            <Footer />
         </div>
     );
 }
