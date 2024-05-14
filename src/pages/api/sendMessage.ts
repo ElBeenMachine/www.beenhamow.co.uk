@@ -2,11 +2,13 @@
  * @author @ElBeenMachine
  */
 
+import type { NextApiRequest, NextApiResponse } from "next";
+
 const sgMail = require("@sendgrid/mail");
 sgMail.setApiKey(process.env.SENDGRID_KEY);
 
 // Send confirmation email to user
-function sendConfirmationEmail(from, name, to, message) {
+function sendConfirmationEmail(from: string, name: string, to: string, message: string) {
     const msg = {
         to,
         from: {
@@ -43,7 +45,7 @@ function sendConfirmationEmail(from, name, to, message) {
 }
 
 // Send message to owner
-function sendToOwner(from, replyTo, name, message) {
+function sendToOwner(from: string, replyTo: string, name: string, message: string) {
     const to = "hello@beenhamow.co.uk";
 
     const msg = {
@@ -65,7 +67,7 @@ function sendToOwner(from, replyTo, name, message) {
 }
 
 // API route to send an email
-export default async (req, res) => {
+export default async (req: NextApiRequest, res: NextApiResponse) => {
     if (req.method === "POST") {
         const from = "no-reply@mail.beenhamow.co.uk";
 
