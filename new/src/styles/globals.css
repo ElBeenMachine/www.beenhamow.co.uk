@@ -2,12 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+    scroll-behavior: smooth;
+}
+
 body,
 html {
     background-color: theme(colors[background-primary]);
     color: theme(colors[white]);
     min-height: 100dvh;
-    scroll-behavior: smooth;
 }
 
 .big-header {

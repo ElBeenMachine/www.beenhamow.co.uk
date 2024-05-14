@@ -38,7 +38,7 @@ interface FooterLinkProps {
  */
 function FooterLink({ href, text, target = "_self" }: FooterLinkProps) {
     return (
-        <Link href={href} className="text-gray-300 hover:text-white/50 transition-all">
+        <Link href={href} target={target} className="text-gray-300 hover:text-white/50 transition-all">
             {text}
         </Link>
     );

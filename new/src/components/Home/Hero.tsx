@@ -29,9 +29,9 @@ export default function Hero() {
                 </Link>
             </div>
             <div className="flex justify-center items-center h-[80px] w-full">
-                <Link href="#about" className="text-2xl hover:text-white/50 transition-all animate-bounce">
+                <a href="#about" className="text-2xl hover:text-white/50 transition-all animate-bounce">
                     <IoIosArrowDown size={30} />
-                </Link>
+                </a>
             </div>
         </Container>
     );
