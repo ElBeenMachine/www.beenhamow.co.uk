@@ -3,7 +3,7 @@ import Layout from "@/components/Layout/MasterLayout";
 import ProjectCard from "@/components/Projects/ProjectCard";
 import { ProjectStructureProps } from "@/interfaces/Project.interface";
 import { readdirSync } from "fs";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 /**
  * The projects page
@@ -12,11 +12,13 @@ import { useEffect } from "react";
  */
 export default function ProjectsPage({ _projects }: { _projects: string }) {
     // Load in all projects from the projects directory
-    const projects = JSON.parse(_projects) as ProjectStructureProps[];
+    let [projects, setProjects] = useState(JSON.parse(_projects) as ProjectStructureProps[]);
 
     useEffect(() => {
         // Get the current time
         const now = new Date().getTime();
+
+        let projectsCopy = projects;
 
         const getLastModified = async (project: ProjectStructureProps) => {
             // Get the name of the repository from the GitHub link
@@ -39,7 +41,7 @@ export default function ProjectsPage({ _projects }: { _projects: string }) {
             localStorage.setItem(`lastModified-${project.id}`, JSON.stringify({ lastModified: new Date(data[0].commit.author.date), timestamp: now }));
         };
 
-        projects.forEach((project) => {
+        projectsCopy.forEach((project) => {
             // Store dates in local storage to reduce the number of requests to the GitHub API, only update every 24 hours
             const localLastModified = localStorage.getItem(`lastModified-${project.id}`);
 
@@ -60,6 +62,9 @@ export default function ProjectsPage({ _projects }: { _projects: string }) {
                 getLastModified(project);
             }
         });
+
+        // Sort the projects
+        setProjects(projectsCopy.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()));
     }, []);
 
     return (
