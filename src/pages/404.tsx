@@ -2,6 +2,11 @@ import Container from "@/components/Layout/Container";
 import Layout from "@/components/Layout/MasterLayout";
 import Link from "next/link";
 
+/**
+ * The 404 page
+ *
+ * @returns {JSX.Element} The 404 page
+ */
 export default function Error404Page() {
     return (
         <Layout pageTitle="Not Found">

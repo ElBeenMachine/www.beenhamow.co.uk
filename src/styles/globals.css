@@ -43,3 +43,9 @@ html {
 .arrowList li::marker {
     color: #00ffff;
 }
+
+.project-card {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
