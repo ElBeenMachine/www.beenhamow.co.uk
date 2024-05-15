@@ -2,7 +2,7 @@ import Container from "../Layout/Container";
 import { WorkCardProps } from "@/interfaces/WorkCard.interface";
 import { WorkData } from "@/data/work";
 import Link from "next/link";
-import { Fragment } from "react";
+import { formatDescription } from "@/utils/DescriptionFormatter";
 
 /**
  * A component to display a work card
@@ -11,13 +11,6 @@ import { Fragment } from "react";
  * @returns
  */
 function WorkCard({ title, description, dates, image, url }: WorkCardProps) {
-    const descriptionWithLineBreaks = description.split("\n").map((text, index) => (
-        <Fragment key={index}>
-            {text}
-            <br />
-        </Fragment>
-    ));
-
     return (
         <div className="w-full my-5 flex flex-col md:flex-row items-center md:items-start">
             <img src={image} alt={title} className="w-32 h-32 md:w-40 md:h-40 mb-10 md:mb-0 rounded-full object-cover object-center" />
@@ -29,7 +22,7 @@ function WorkCard({ title, description, dates, image, url }: WorkCardProps) {
                         {url.split("https://")[1]}
                     </Link>
                 )}
-                <p className={"text-sm text-justify mt-3"}>{descriptionWithLineBreaks}</p>
+                <p className={"text-sm text-justify mt-3"}>{formatDescription(description)}</p>
             </div>
         </div>
     );

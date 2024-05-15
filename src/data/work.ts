@@ -11,7 +11,7 @@ export const WorkData = [
         url: "https://www.wedoplay.co.uk",
     },
     {
-        title: "On-Prem Identity Management for 472 Squadron",
+        title: "On-Premises Identity Management for 472 (Hoylake and West Kirby) Squadron ATC",
         dates: "2020 - 2022",
         description: `During my time as IT Officer at 472 Squadron ATC, I was tasked with setting up and maintaining the IT infrastructure for use by cadets and staff. Using the hardware available to me, I created a active directory domain controller, ad well as a backup domain controller and a file server to allow for secure access to resources. The domain controllers were set up using Windows Server 2019 and the file server was set up using TrueNas. 
             
