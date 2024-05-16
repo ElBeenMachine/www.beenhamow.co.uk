@@ -30,13 +30,13 @@ export default function Navbar() {
                 </Link>
                 <div className={"h-full w-max justify-end hidden md:flex"}>
                     <NavLink href={"/"}>
-                        <span className={"text-[#00ffff] mr-2"}>01.</span>Home
+                        <span className={"text-accent mr-2"}>01.</span>Home
                     </NavLink>
                     <NavLink href={"/projects"}>
-                        <span className={"text-[#00ffff] mr-2"}>02.</span>Projects
+                        <span className={"text-accent mr-2"}>02.</span>Projects
                     </NavLink>
                     <NavLink href={"/contact-me"}>
-                        <span className={"text-[#00ffff] mr-2"}>03.</span>Contact Me
+                        <span className={"text-accent mr-2"}>03.</span>Contact Me
                     </NavLink>
                 </div>
             </div>

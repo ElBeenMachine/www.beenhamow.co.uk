@@ -9,8 +9,8 @@ export default function About() {
                     <div className="w-full">
                         <h1 className="text-4xl font-bold mb-5">About Me</h1>
                         <p className={"mb-6"}>
-                            Hi there, I'm <span className={"text-[#00ffffff]"}>Ollie</span> and I enjoy creating things that live on the web and in the cloud. My interest in programming really emerged
-                            back in <span className={"text-[#00ffffff]"}>2016</span> when I created my first project in <span className={"text-[#00ffffff]"}>Python</span>.
+                            Hi there, I'm <span className={"text-accent"}>Ollie</span> and I enjoy creating things that live on the web and in the cloud. My interest in programming really emerged back
+                            in <span className={"text-accent"}>2016</span> when I created my first project in <span className={"text-accent"}>Python</span>.
                         </p>
                         <p className={"mb-6"}>
                             Since then, I've been working on boilerplate projects, and have created a number of automation processes, saving countless hours at a multi-national company.
@@ -21,7 +21,7 @@ export default function About() {
                     </div>
                 </div>
 
-                <Link href={"/contact-me"} className={"block w-max transition-all text-[#00ffff] font-semibold border rounded-md border-[#00ffff] px-4 py-3 hover:text-[#303030] hover:bg-[#00ffff]"}>
+                <Link href={"/contact-me"} className={"block w-max transition-all text-accent font-semibold border rounded-md border-accent px-4 py-3 hover:text-[#303030] hover:bg-accent"}>
                     Get In Touch
                 </Link>
             </Container>

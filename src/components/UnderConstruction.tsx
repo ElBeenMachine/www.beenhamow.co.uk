@@ -9,7 +9,7 @@ export default function UnderConstructionCard() {
                 <div className={"flex justify-center items-center flex-col gap-5"}>
                     <Image src={"/img/under-construction.svg"} width={300} height={300} alt={"Under Construction"} />
                     <p className={"text-center max-w-[500px] my-5"}>This page is currently under construction, please come back soon.</p>
-                    <Link href={"/"} className={"transition-all text-[#00ffff] font-semibold border rounded-md border-[#00ffff] px-6 py-2 hover:text-[#303030] hover:bg-[#00ffff] "}>
+                    <Link href={"/"} className={"transition-all text-accent font-semibold border rounded-md border-accent px-6 py-2 hover:text-[#303030] hover:bg-accent "}>
                         Go Home
                     </Link>
                 </div>

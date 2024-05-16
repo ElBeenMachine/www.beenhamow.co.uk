@@ -7,6 +7,7 @@ const config: Config = {
             colors: {
                 accent: "#00ffff",
                 "background-primary": "#1a1a1a",
+                input: "#2b2b2b",
             },
             backgroundImage: {
                 "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
