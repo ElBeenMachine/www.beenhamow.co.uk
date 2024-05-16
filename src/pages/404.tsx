@@ -9,7 +9,7 @@ import Link from "next/link";
  */
 export default function Error404Page() {
     return (
-        <Layout pageTitle="Not Found">
+        <Layout pageTitle="Not Found" pageDescription="The page or resource that you have requested is no longer available or has been moved.">
             <div className={"h-[calc(100dvh-160px)] mb-[80px] flex justify-center items-center"}>
                 <Container>
                     <div className={"flex justify-center items-center flex-col gap-5"}>
