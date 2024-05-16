@@ -29,7 +29,7 @@ export default function ProjectsPage({ _projects }: { _projects: string }) {
     }, []);
 
     return (
-        <Layout pageTitle="My Projects">
+        <Layout pageTitle="My Projects" pageDescription="A list of projects and works completed by Ollie Beenham.">
             <div className="my-5">
                 <Container>
                     <h1 className="text-4xl font-bold">My Projects</h1>

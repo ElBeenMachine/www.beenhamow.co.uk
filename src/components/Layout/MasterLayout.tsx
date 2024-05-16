@@ -10,8 +10,8 @@ interface LayoutProps {
 }
 
 const defaultTitle = "Ollie Beenham";
-const defaultDescription = "My Portfolio";
-const defaultImage = "https://www.beenhamow.co.uk/img/meta/default.webp";
+const defaultDescription = "This website is home to a portfolio of projects and work completed by Ollie Beenham.";
+const defaultImage = "https://www.beenhamow.co.uk/img/meta/default.png";
 
 export default function Layout({ children, pageTitle, pageDescription, pageImage }: LayoutProps) {
     const title = pageTitle ? `${defaultTitle} | ${pageTitle}` : defaultTitle;
