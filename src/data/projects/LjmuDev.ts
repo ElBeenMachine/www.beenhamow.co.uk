@@ -11,6 +11,6 @@ export default <ProjectStructureProps>{
     website: "https://www.ljmu.dev",
     github: "https://www.github.com/LJMU-SE/www.ljmu.dev",
     repoName: "ljmu-se/www.ljmu.dev",
-    image: "/img/meta/default.png",
+    image: "/img/projects/ljmu.dev.jpg",
     date: new Date("2004-03-17"),
 };

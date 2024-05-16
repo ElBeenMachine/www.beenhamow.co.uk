@@ -4,9 +4,7 @@ export const WorkData = [
     {
         title: "Internal Processes for WeDoPlay",
         dates: "2022 - Present",
-        description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec elementum sem mi. Duis in ultricies metus. Ut fermentum ante a ligula elementum congue. Maecenas euismod quam neque, sit amet lacinia nisl condimentum non. In interdum vulputate ante a accumsan. Maecenas non elit sapien. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam sagittis sem quis semper vehicula. Maecenas congue ultrices accumsan. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 
-        
-        Nam vehicula scelerisque turpis, at ullamcorper augue dignissim vel. In felis risus, eleifend sed massa eu, dictum suscipit neque. Donec suscipit eleifend libero, quis vehicula purus pellentesque sed. Duis nulla mi, ultricies et justo eu, lobortis ultrices sapien. Mauris id lectus condimentum est vehicula tristique sed a velit. Pellentesque imperdiet magna quis pharetra lobortis. Quisque fermentum augue arcu, quis faucibus ligula gravida sit amet. Aliquam porttitor condimentum iaculis. Integer et massa a diam porta lobortis. Vivamus fermentum odio libero. Suspendisse lacinia urna eget mauris posuere elementum. Nam luctus tortor quis mattis suscipit. Phasellus euismod imperdiet ligula, et varius erat auctor non. Mauris quis auctor risus. Morbi vel fringilla est, a accumsan felis. Sed a ante tortor.`,
+        description: `At WeDoPlay, I was tasked with creating a number of internal systems and processes to ease the workload of my colleagues nationwide. These systems included a number of autommations to be used in day-to-day tasks, as well as some completely autonomous tasks that ran in the background to communicate vital information to guests. `,
         image: "/img/work/wedoplay.jpg",
         url: "https://www.wedoplay.co.uk",
     },

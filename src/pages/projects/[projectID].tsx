@@ -21,7 +21,7 @@ export default function ProjectDetailPage({ _project }: ProjectDetailPageProps) 
     return (
         <Layout pageTitle={project.title} pageDescription={project.summary}>
             <Container>
-                <div className={"flex flex-wrap md:flex-nowrap my-5 gap-5"}>
+                <div className={"flex flex-wrap md:flex-nowrap mt-5 mb-10 gap-5"}>
                     <ProjectInfoSideBar project={project} />
                     <div className="w-full md:w-2/3">{formatDescription(project.description)}</div>
                 </div>

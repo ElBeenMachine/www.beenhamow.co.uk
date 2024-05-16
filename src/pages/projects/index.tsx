@@ -5,6 +5,7 @@ import { ProjectStructureProps } from "@/interfaces/Project.interface";
 import getLastModified from "@/utils/GetProjectLastUpdated";
 import { readdirSync } from "fs";
 import { useEffect, useState } from "react";
+import { BarLoader } from "react-spinners";
 
 /**
  * The projects page
@@ -18,9 +19,13 @@ export default function ProjectsPage({ _projects }: { _projects: string }) {
     useEffect(() => {
         let projectsCopy = JSON.parse(_projects) as ProjectStructureProps[];
 
-        Promise.all(projectsCopy.map(getLastModified)).then(() => {
-            setProjects(projectsCopy.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()));
-        });
+        const timeout = setTimeout(() => {
+            Promise.all(projectsCopy.map(getLastModified)).then(() => {
+                setProjects(projectsCopy.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()));
+            });
+        }, 1500);
+
+        return () => clearTimeout(timeout);
     }, []);
 
     return (
@@ -28,11 +33,19 @@ export default function ProjectsPage({ _projects }: { _projects: string }) {
             <div className="my-5">
                 <Container>
                     <h1 className="text-4xl font-bold">My Projects</h1>
-                    <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-5 my-5">
-                        {projects.map((project) => (
-                            <ProjectCard key={project.title} project={project} />
-                        ))}
-                    </div>
+                    {projects.length == 0 && (
+                        <div className="w-full h-96 flex justify-center items-center">
+                            <BarLoader color="#00FFFF" />
+                        </div>
+                    )}
+
+                    {projects.length > 0 && (
+                        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-5 my-5">
+                            {projects.map((project) => (
+                                <ProjectCard key={project.title} project={project} />
+                            ))}
+                        </div>
+                    )}
                 </Container>
             </div>
         </Layout>
