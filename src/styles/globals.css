@@ -26,24 +26,6 @@ html {
     }
 }
 
-.arrowList {
-    list-style: "➤";
-    padding-inline-start: 20px;
-}
-
-.arrowList {
-    list-style: "➤";
-    padding-inline-start: 20px;
-}
-
-.arrowList li {
-    padding-left: 10px;
-}
-
-.arrowList li::marker {
-    color: #00ffff;
-}
-
 .project-card {
     background-position: center;
     background-repeat: no-repeat;

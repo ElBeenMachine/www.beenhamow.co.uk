@@ -11,9 +11,9 @@ export default async function getLastModified(project: ProjectStructureProps) {
             const { lastModified, timestamp } = JSON.parse(localLastModified);
 
             // If the data is older than 24 hours, update it
-            if (now.getTime() - timestamp < 86400000) {
+            if (now.getTime() - new Date(timestamp).getTime() < 86400000) {
                 project.date = lastModified;
-                return;
+                return resolve(project);
             }
         }
 
@@ -21,13 +21,13 @@ export default async function getLastModified(project: ProjectStructureProps) {
         const res = await fetch(`https://api.github.com/repos/${project.repoName}/commits`);
 
         // If the request fails, set the date to the default date
-        if (!res.ok) resolve(project);
+        if (!res.ok) return resolve(project);
 
         // Parse the response
         const data = await res.json();
 
         // If there is no data, set the date to the default date
-        if (!data) resolve(project);
+        if (!data) return resolve(project);
 
         // Set the date of the last commit
         project.date = new Date(data[0].commit.author.date);

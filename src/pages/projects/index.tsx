@@ -23,7 +23,7 @@ export default function ProjectsPage({ _projects }: { _projects: string }) {
             Promise.all(projectsCopy.map(getLastModified)).then(() => {
                 setProjects(projectsCopy.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()));
             });
-        }, 1500);
+        }, 500);
 
         return () => clearTimeout(timeout);
     }, []);

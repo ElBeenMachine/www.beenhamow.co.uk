@@ -17,7 +17,7 @@ interface ProjectInfoSideBarProps {
  * @returns {JSX.Element} The project info sidebar
  */
 export default function ProjectInfoSideBar({ project }: ProjectInfoSideBarProps) {
-    const [updatedProject, setUpdatedProject] = useState<ProjectStructureProps>(project);
+    const [updatedProject, setUpdatedProject] = useState<ProjectStructureProps | null>(null);
 
     useEffect(() => {
         getLastModified(project).then((project) => setUpdatedProject(project));
@@ -25,20 +25,20 @@ export default function ProjectInfoSideBar({ project }: ProjectInfoSideBarProps)
 
     return (
         <div className="w-full md:w-max">
-            <h1 className="text-4xl font-bold">{updatedProject.title}</h1>
+            <h1 className="text-4xl font-bold">{updatedProject?.title}</h1>
             <p className="text-accent text-light text-xs mt-2">
-                Last updated: {moment(updatedProject.date).format("DD/MM/YY")} ({moment(updatedProject.date).fromNow()})
+                Last updated: {moment(updatedProject?.date).format("DD/MM/YY")} ({moment(updatedProject?.date).fromNow()})
             </p>
-            <p className="text-gray-400 text-sm mt-5 md:max-w-80">{updatedProject.summary}</p>
+            <p className="text-gray-400 text-sm mt-5 md:max-w-80">{updatedProject?.summary}</p>
             <div className="mt-5">
-                {updatedProject.github && (
-                    <Link href={updatedProject.github} target="_blank" className="mt-2 block hover:text-gray-400 transition-all">
-                        <FaGithub size={20} className="inline-block mr-2" /> {updatedProject.repoName}
+                {updatedProject?.github && (
+                    <Link href={updatedProject?.github} target="_blank" className="mt-2 block hover:text-gray-400 transition-all">
+                        <FaGithub size={20} className="inline-block mr-2" /> {updatedProject?.repoName}
                     </Link>
                 )}
-                {updatedProject.website && (
-                    <Link href={updatedProject.website} target="_blank" className="mt-2 block hover:text-gray-400 transition-all">
-                        <CiGlobe size={20} className="inline-block mr-2" /> {updatedProject.website.replace("https://", "").split("/")[0]}
+                {updatedProject?.website && (
+                    <Link href={updatedProject?.website} target="_blank" className="mt-2 block hover:text-gray-400 transition-all">
+                        <CiGlobe size={20} className="inline-block mr-2" /> {updatedProject?.website.replace("https://", "").split("/")[0]}
                     </Link>
                 )}
             </div>

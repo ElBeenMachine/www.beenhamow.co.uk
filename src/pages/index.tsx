@@ -1,5 +1,6 @@
 import About from "@/components/Home/About";
 import Hero from "@/components/Home/Hero";
+import ProjectShowcase from "@/components/Home/Projects";
 import Technologies from "@/components/Home/Technologies";
 import MyWork from "@/components/Home/Work";
 import Layout from "@/components/Layout/MasterLayout";
@@ -15,7 +16,7 @@ export default function Home() {
             <Hero />
             <About />
             <Technologies />
-            {/* TODO: Add Projects */}
+            <ProjectShowcase />
             <MyWork />
         </Layout>
     );

@@ -4,6 +4,9 @@ import ProjectInfoSideBar from "@/components/Projects/ProjectInfoSideBar";
 import { ProjectStructureProps } from "@/interfaces/Project.interface";
 import { formatDescription } from "@/utils/DescriptionFormatter";
 import { readdirSync } from "fs";
+import { loremIpsum } from "lorem-ipsum";
+import Link from "next/link";
+import { FaArrowLeft } from "react-icons/fa";
 
 interface ProjectDetailPageProps {
     _project: string;
@@ -21,9 +24,14 @@ export default function ProjectDetailPage({ _project }: ProjectDetailPageProps) 
     return (
         <Layout pageTitle={project.title} pageDescription={project.summary}>
             <Container>
-                <div className={"flex flex-wrap md:flex-nowrap mt-5 mb-10 gap-5"}>
+                <Link href={"/projects"} target={"_self"} className={"mt-5 mb-2 flex items-center transition-all group hover:text-accent w-max font-light font-normal text-md"}>
+                    <FaArrowLeft className={"inline mr-3 group-hover:-translate-x-1 transition-all text-accent"} /> Back
+                </Link>
+                <div className={"flex flex-wrap md:flex-nowrap mb-10 gap-5"}>
                     <ProjectInfoSideBar project={project} />
-                    <div className="w-full md:w-2/3">{formatDescription(project.description)}</div>
+                    <div className="w-full md:w-2/3">
+                        {formatDescription(project.description != "" ? project.description : loremIpsum({ count: 4, format: "plain", units: "paragraphs", suffix: "\n\n" }))}
+                    </div>
                 </div>
             </Container>
         </Layout>

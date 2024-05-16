@@ -1,3 +1,5 @@
+import ContactForm from "@/components/Contact/ContactForm";
+import Container from "@/components/Layout/Container";
 import Layout from "@/components/Layout/MasterLayout";
 import UnderConstructionCard from "@/components/UnderConstruction";
 
@@ -9,7 +11,9 @@ import UnderConstructionCard from "@/components/UnderConstruction";
 export default function ContactPage() {
     return (
         <Layout pageTitle="Contact Me">
-            <UnderConstructionCard />
+            <Container>
+                <ContactForm />
+            </Container>
         </Layout>
     );
 }
