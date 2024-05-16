@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Navbar from "./NavBar";
 import Footer from "./Footer";
+import GoogleAnalytics from "../Analytics";
 
 interface LayoutProps {
     children?: React.ReactNode;
@@ -49,6 +50,7 @@ export default function Layout({ children, pageTitle, pageDescription, pageImage
             <Navbar />
             <main>{children}</main>
             <Footer />
+            <GoogleAnalytics />
         </div>
     );
 }
