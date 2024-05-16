@@ -6,6 +6,7 @@ export interface ProjectStructureProps {
     technologies: string[];
     website?: string;
     github: string;
+    repoName: string;
     image: string;
     date: Date;
 }

@@ -8,6 +8,7 @@ export default <ProjectStructureProps>{
     technologies: ["Next.JS", "JavaScript", "React", "Chakra UI", "CI/CD", "Vercel"],
     website: "https://www.472squadron.com",
     github: "https://github.beenhamow.co.uk/www.472squadron.com",
+    repoName: "ElBeenMachine/www.472squadron.com",
     image: "https://www.472squadron.com/img/landing/hero-2.jpg",
     date: new Date("2023-05-23"),
 };
