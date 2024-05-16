@@ -78,7 +78,6 @@ export default function Footer() {
                         </div>
                         <FooterLinkContainer name="Sitemap">
                             <FooterLink href={"/"} text={"Home"} />
-                            <FooterLink href={"/about-me"} text={"About Me"} />
                             <FooterLink href={"/projects"} text={"My Projects"} />
                             <FooterLink href={"/contact-me"} text={"Contact Me"} />
                         </FooterLinkContainer>

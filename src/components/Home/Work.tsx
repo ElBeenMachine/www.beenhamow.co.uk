@@ -12,7 +12,7 @@ import { formatDescription } from "@/utils/DescriptionFormatter";
  */
 function WorkCard({ title, description, dates, image, url }: WorkCardProps) {
     return (
-        <div className="w-full my-5 flex flex-col md:flex-row items-center md:items-start">
+        <div className="w-full my-5 flex flex-col md:flex-row items-center md:items-start" id={"work"}>
             <img src={image} alt={title} className="w-32 h-32 md:w-40 md:h-40 mb-10 md:mb-0 rounded-full object-cover object-center" />
             <div className="w-full md:ml-10">
                 <h2 className={"text-2xl font-bold"}>{title}</h2>

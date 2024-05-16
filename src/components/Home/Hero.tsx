@@ -22,7 +22,7 @@ export default function Hero() {
                 <Link
                     href={"https://github.beenhamow.co.uk"}
                     target="_blank"
-                    className={"transition-all text-[#00ffff] font-semibold border rounded-md border-[#00ffff] px-8 py-4 hover:text-[#303030] hover:bg-[#00ffff] big-header"}
+                    className={"block w-max transition-all text-[#00ffff] font-semibold border rounded-md border-[#00ffff] px-8 py-4 hover:text-[#303030] hover:bg-[#00ffff] big-header"}
                     style={{ animationDelay: "500ms" }}
                 >
                     Check Out My GitHub!

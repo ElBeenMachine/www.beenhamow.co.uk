@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Container from "../Layout/Container";
 
 export default function About() {
@@ -14,23 +15,15 @@ export default function About() {
                         <p className={"mb-6"}>
                             Since then, I've been working on boilerplate projects, and have created a number of automation processes, saving countless hours at a multi-national company.
                         </p>
-                        <p className={"mb-6"}>Here are some of the technologies I use on a day-to-day basis:</p>
-                        <ul className={"flex flex-col flex-wrap max-h-20 arrowList"}>
-                            <li>JavaScript</li>
-                            <li>Typescript</li>
-                            <li>Java</li>
-                            <li>Python</li>
-                            <li>Express</li>
-                            <li>React</li>
-                            <li>Next.js</li>
-                            <li>Azure</li>
-                            <li>MongoDB</li>
-                        </ul>
                     </div>
                     <div className="hidden md:flex w-full justify-center items-center flex-grow">
                         <img src="/img/about.svg" alt="About Me" className="max-w-[400px]" />
                     </div>
                 </div>
+
+                <Link href={"/contact-me"} className={"block w-max transition-all text-[#00ffff] font-semibold border rounded-md border-[#00ffff] px-4 py-3 hover:text-[#303030] hover:bg-[#00ffff]"}>
+                    Get In Touch
+                </Link>
             </Container>
         </div>
     );

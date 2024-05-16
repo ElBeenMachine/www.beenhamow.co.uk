@@ -6,7 +6,7 @@ export default function App({ Component, pageProps }: AppProps) {
     return (
         <>
             <NextNProgress color="#00FFFF" options={{ showSpinner: false }} />
-            <Component {...pageProps} />;
+            <Component {...pageProps} />
         </>
     );
 }

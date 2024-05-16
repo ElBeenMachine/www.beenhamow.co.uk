@@ -32,14 +32,11 @@ export default function Navbar() {
                     <NavLink href={"/"}>
                         <span className={"text-[#00ffff] mr-2"}>01.</span>Home
                     </NavLink>
-                    <NavLink href={"/about-me"}>
-                        <span className={"text-[#00ffff] mr-2"}>02.</span>About Me
-                    </NavLink>
                     <NavLink href={"/projects"}>
-                        <span className={"text-[#00ffff] mr-2"}>03.</span>Projects
+                        <span className={"text-[#00ffff] mr-2"}>02.</span>Projects
                     </NavLink>
                     <NavLink href={"/contact-me"}>
-                        <span className={"text-[#00ffff] mr-2"}>04.</span>Contact Me
+                        <span className={"text-[#00ffff] mr-2"}>03.</span>Contact Me
                     </NavLink>
                 </div>
             </div>
