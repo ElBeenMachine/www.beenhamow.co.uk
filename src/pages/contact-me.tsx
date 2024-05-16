@@ -10,7 +10,7 @@ import UnderConstructionCard from "@/components/UnderConstruction";
  */
 export default function ContactPage() {
     return (
-        <Layout pageTitle="Contact Me">
+        <Layout pageTitle="Contact Me" pageDescription="Fill out this form to get in contact.">
             <Container>
                 <ContactForm />
             </Container>
