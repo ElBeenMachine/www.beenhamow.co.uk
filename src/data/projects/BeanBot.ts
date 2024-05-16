@@ -10,6 +10,7 @@ export default <ProjectStructureProps>{
     technologies: ["Skill 1", "Skill 2", "Skill 3"],
     website: "https://www.beenhamow.co.uk",
     github: "https://github.beenhamow.co.uk",
+    repoName: "ElBeenMachine/bean-bot",
     image: "/img/meta/default.png",
     date: new Date("2023-05-24"),
 };

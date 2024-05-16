@@ -12,18 +12,31 @@ import { useEffect, useState } from "react";
  */
 export default function ProjectsPage({ _projects }: { _projects: string }) {
     // Load in all projects from the projects directory
-    let [projects, setProjects] = useState(JSON.parse(_projects) as ProjectStructureProps[]);
+    let [projects, setProjects] = useState([] as ProjectStructureProps[]);
 
     useEffect(() => {
         // Get the current time
         const now = new Date().getTime();
 
-        let projectsCopy = projects;
+        let projectsCopy = JSON.parse(_projects) as ProjectStructureProps[];
 
         const getLastModified = async (project: ProjectStructureProps) => {
+            const localLastModified = localStorage.getItem(`lastModified-${project.id}`);
+
+            // If the date is stored in local storage, check if it is older than 24 hours
+            if (localLastModified) {
+                // Parse the stored data
+                const { lastModified, timestamp } = JSON.parse(localLastModified);
+
+                // If the data is older than 24 hours, update it
+                if (now - timestamp < 86400000) {
+                    project.date = lastModified;
+                    return;
+                }
+            }
+
             // Get the name of the repository from the GitHub link
-            const repoName = project.github.split("/").pop();
-            const res = await fetch(`https://api.github.com/repos/ElBeenMachine/${repoName}/commits`);
+            const res = await fetch(`https://api.github.com/repos/${project.repoName}/commits`);
 
             // If the request fails, set the date to the default date
             if (!res.ok) return;
@@ -41,30 +54,36 @@ export default function ProjectsPage({ _projects }: { _projects: string }) {
             localStorage.setItem(`lastModified-${project.id}`, JSON.stringify({ lastModified: new Date(data[0].commit.author.date), timestamp: now }));
         };
 
-        projectsCopy.forEach((project) => {
-            // Store dates in local storage to reduce the number of requests to the GitHub API, only update every 24 hours
-            const localLastModified = localStorage.getItem(`lastModified-${project.id}`);
-
-            // If the date is stored in local storage, check if it is older than 24 hours
-            if (localLastModified) {
-                // Parse the stored data
-                const { lastModified, timestamp } = JSON.parse(localLastModified);
-
-                // If the data is older than 24 hours, update it
-                if (now - timestamp < 86400000) {
-                    project.date = lastModified;
-                    return;
-                }
-            }
-
-            // If a GitHub link is provided, create a fetch request to the GitHub API to get the date of the latest commit
-            if (project.github) {
-                getLastModified(project);
-            }
+        Promise.all(projectsCopy.map(getLastModified)).then(() => {
+            setProjects(projectsCopy.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()));
         });
 
-        // Sort the projects
-        setProjects(projectsCopy.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()));
+        // projectsCopy.forEach((project) => {
+        //     // Store dates in local storage to reduce the number of requests to the GitHub API, only update every 24 hours
+        //     const localLastModified = localStorage.getItem(`lastModified-${project.id}`);
+
+        //     // If the date is stored in local storage, check if it is older than 24 hours
+        //     if (localLastModified) {
+        //         // Parse the stored data
+        //         const { lastModified, timestamp } = JSON.parse(localLastModified);
+
+        //         // If the data is older than 24 hours, update it
+        //         if (now - timestamp < 86400000) {
+        //             project.date = lastModified;
+        //             return;
+        //         }
+        //     }
+
+        //     // If a GitHub link is provided, create a fetch request to the GitHub API to get the date of the latest commit
+        //     if (project.github) {
+        //         getLastModified(project);
+        //     }
+        // });
+
+        // console.log(projects);
+
+        // // Sort the projects
+        // setProjects(projectsCopy.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()));
     }, []);
 
     return (

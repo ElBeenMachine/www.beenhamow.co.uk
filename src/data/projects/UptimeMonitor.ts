@@ -10,6 +10,7 @@ export default <ProjectStructureProps>{
     technologies: ["Next.js", "TypeScript", "Tailwind CSS", "MySQL", "Docker", "CI/CD"],
     website: "https://elbeenmachine.github.io/uptime-monitor",
     github: "https://github.beenhamow.co.uk/uptime-monitor",
+    repoName: "ElBeenMachine/uptime-monitor",
     image: "https://opengraph.githubassets.com/e80a501c76c941970a3fb7ab34ff714074313db116e8129c66b00a8ae8354b4b/ElBeenMachine/uptime-monitor",
     date: new Date("2024-03-27"),
 };
