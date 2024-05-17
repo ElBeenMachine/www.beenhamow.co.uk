@@ -4,7 +4,9 @@ export default <ProjectStructureProps>{
     id: "template-project",
     title: "Template Project",
     summary: "A short summary of the project.",
+
     description: ``,
+
     technologies: ["Skill 1", "Skill 2", "Skill 3"],
     website: "https://www.beenhamow.co.uk",
     github: "https://github.beenhamow.co.uk",
