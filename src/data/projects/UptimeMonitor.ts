@@ -4,9 +4,17 @@ export default <ProjectStructureProps>{
     id: "uptime-monitor",
     title: "Uptime Monitor",
     summary: "A docker-based web application that allows users to monitor the uptime of their websites and services.",
-    description: `Uptime Monitor is an ongoing project that I am working on. It is a web application that allows users to monitor the uptime of their websites and services. The application is built using Next.js, Tailwind CSS, and MySQL and has been published to docker, making it ideal for deployment in a homelab or cloud environment. The application is currently in the development stage, and I am continually working on adding new features and improving the user experience.
-    
-    The application is built using a containerised architecture, with a Next.js frontend and a Node.js backend. The frontend communicates with the backend using RESTful APIs, and the backend communicates with the database using the MySql2 library.`,
+
+    description: `This project is an ongoing development of a web-based uptime monitor built with a focus on developer experience, flexibility, and scalability. Leveraging my familiarity with NodeJS, I opted for this robust and event-driven runtime environment to handle asynchronous tasks like scheduling health checks efficiently.  Building upon NodeJS, the NextJS framework provides a server-rendered application with features like automatic code-splitting and built-in routing, streamlining development and optimizing performance.
+
+    To achieve a consistent and customizable user interface for individual status pages, I integrated Tailwind CSS. Tailwind's utility-first approach offers a vast library of pre-built CSS classes, allowing for rapid UI development without writing extensive custom styles. This not only saves development time but also ensures a consistent look and feel across the entire application.
+
+    The project prioritizes open-source development, hosted publicly on GitHub. This allows for collaboration and contribution from the developer community, fostering ongoing improvement.
+
+    To ensure data persistence and independence from the user interface, the monitor utilizes a dedicated SQL database for storage. This separation allows for independent updates to the front-end without compromising monitoring data integrity.
+
+    For streamlined development and deployment, the project leverages CI/CD pipelines. These pipelines automate tasks like building and testing the codebase, creating Docker images using a provided docker-compose file, and finally pushing them to Docker Hub. This automated workflow ensures consistent and efficient deployments. Additionally, the integration of unit tests within the CI/CD pipeline is planned for the future. This will enhance code coverage and overall project quality.`,
+
     technologies: ["Next.js", "TypeScript", "Tailwind CSS", "MySQL", "Docker", "CI/CD"],
     website: "https://elbeenmachine.github.io/uptime-monitor",
     github: "https://github.beenhamow.co.uk/uptime-monitor",
