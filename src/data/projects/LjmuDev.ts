@@ -3,7 +3,7 @@ import { ProjectStructureProps } from "@/interfaces/Project.interface";
 export default <ProjectStructureProps>{
     id: "ljmu-se-team-portfolio",
     title: "LJMU SE Team Portfolio",
-    summary: "A short summary of the project.",
+    summary: "A portfolio of projects for a team of Software Engineering students at Liverpool John Moores University.",
     description: ``,
     technologies: ["NextJS", "Docker", "CI/CD", "TypeScript", "React", "TailwindCSS"],
     website: "https://www.ljmu.dev",
