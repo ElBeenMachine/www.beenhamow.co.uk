@@ -22,7 +22,7 @@ jobs:
               run: |
                   VERSION=$(node -p "require('./package.json').version")
                   docker build -t beenhamo/www.beenhamow.co.uk:beta .
-                  docker tag beenhamo/www.beenhamow.co.uk:beta-v$VERSION beenhamo/www.beenhamow.co.uk:beta-v$VERSION
+                  docker tag beenhamo/www.beenhamow.co.uk:beta-v$VERSION beenhamo/www.beenhamow.co.uk:beta
 
             - name: Push Docker images
               run: |
