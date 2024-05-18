@@ -21,11 +21,11 @@ jobs:
             - name: Build Docker image
               run: |
                   VERSION=$(node -p "require('./package.json').version")
-                  docker build -t beenhamo/www.beenhamow.co.uk:$VERSION .
-                  docker tag beenhamo/www.beenhamow.co.uk:$VERSION beenhamo/www.beenhamow.co.uk:latest
+                  docker build -t beenhamo/www.beenhamow.co.uk:v$VERSION .
+                  docker tag beenhamo/www.beenhamow.co.uk:v$VERSION beenhamo/www.beenhamow.co.uk:latest
 
             - name: Push Docker images
               run: |
                   VERSION=$(node -p "require('./package.json').version")
-                  docker push beenhamo/www.beenhamow.co.uk:$VERSION
+                  docker push beenhamo/www.beenhamow.co.uk:v$VERSION
                   docker push beenhamo/www.beenhamow.co.uk:latest
