@@ -68,6 +68,9 @@ export default function Footer() {
     // Get the current year
     const year = new Date().getFullYear();
 
+    // Get version
+    const version = require("../../../package.json").version;
+
     return (
         <footer className="py-5">
             <Container>
@@ -92,7 +95,9 @@ export default function Footer() {
                         <SocialLink href={"https://spotify.beenhamow.co.uk"} icon={<FaSpotify size={30} />} />
                     </div>
                     <div className="w-full flex flex-wrap justify-center items-center gap-x-5 gap-y-2">
-                        <p className="text-center text-gray-300/50">&copy; {year} Ollie Beenham.</p>
+                        <p className="text-center text-gray-300/50">
+                            Portfolio v{version} &copy; {year} Ollie Beenham.
+                        </p>
                         <p className="text-center text-gray-300/50">Built with Next.js, Tailwind CSS, and TypeScript.</p>
                     </div>
                 </div>
