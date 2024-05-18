@@ -2,7 +2,7 @@ name: Publish Beta Docker Image
 
 on:
     push:
-        branches: ["beta"]
+        branches: ["staging"]
 
 jobs:
     Publish-Docker-Image:
