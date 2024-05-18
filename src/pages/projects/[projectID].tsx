@@ -24,14 +24,12 @@ export default function ProjectDetailPage({ _project }: ProjectDetailPageProps) 
     return (
         <Layout pageTitle={project.title} pageDescription={project.summary}>
             <Container>
-                <Link href={"/projects"} target={"_self"} className={"mt-5 mb-2 flex items-center transition-all group hover:text-accent w-max font-light font-normal text-md"}>
+                <Link href={"/projects"} target={"_self"} className={"mt-5 mb-2 flex items-center transition-all group hover:text-accent w-max font-normal text-md"}>
                     <FaArrowLeft className={"inline mr-3 group-hover:-translate-x-1 transition-all text-accent"} /> Back
                 </Link>
                 <div className={"flex flex-wrap md:flex-nowrap mb-10 gap-5"}>
                     <ProjectInfoSideBar project={project} />
-                    <div className="w-full md:w-2/3">
-                        {formatDescription(project.description != "" ? project.description : loremIpsum({ count: 4, format: "plain", units: "paragraphs", suffix: "\n\n" }))}
-                    </div>
+                    <div className="w-full md:w-2/3">{project.description && formatDescription(project.description)}</div>
                 </div>
             </Container>
         </Layout>
