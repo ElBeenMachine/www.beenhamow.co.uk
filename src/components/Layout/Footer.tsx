@@ -3,7 +3,6 @@ import Container from "./Container";
 import { IoLogoGithub, IoLogoLinkedin } from "react-icons/io";
 import { FaSpotify } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-import Image from "next/image";
 
 interface SocialLinkProps {
     href: string;
@@ -83,6 +82,10 @@ export default function Footer() {
                             <FooterLink href={"/"} text={"Home"} />
                             <FooterLink href={"/projects"} text={"My Projects"} />
                             <FooterLink href={"/contact-me"} text={"Contact Me"} />
+                        </FooterLinkContainer>
+                        <FooterLinkContainer name="Legal">
+                            <FooterLink href={"/legal/terms-and-conditions"} text={"Terms and Conditions"} />
+                            <FooterLink href={"/legal/privacy-policy"} text={"Privacy Policy"} />
                         </FooterLinkContainer>
                         <FooterLinkContainer name="Other Links">
                             <FooterLink href={"https://www.ljmu.ac.uk"} text={"My University"} target="_blank" />
