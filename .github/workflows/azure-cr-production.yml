@@ -2,10 +2,10 @@ name: Build and Push to ACR
 
 on:
     push:
-        branches: ["staging"]
+        branches: ["production"]
 
 jobs:
-    publish-staging-image:
+    publish-production-image:
         runs-on: ubuntu-latest
 
         steps:
@@ -22,9 +22,13 @@ jobs:
             # Build Docker image
             - name: Build Docker Image
               run: |
-                  docker build -t ${{ secrets.ACR_LOGIN_SERVER }}/${{ secrets.ACR_NAME }}:beta .
+                  VERSION=$(node -p "require('./package.json').version")
+                  docker build -t ${{ secrets.ACR_LOGIN_SERVER }}/${{ secrets.ACR_NAME }}:$VERSION .
+                  docker tag ${{ secrets.ACR_LOGIN_SERVER }}/${{ secrets.ACR_NAME }}:$VERSION ${{ secrets.ACR_LOGIN_SERVER }}/${{ secrets.ACR_NAME }}:latest
 
             # Push Docker image to ACR
             - name: Push Docker Image to ACR
               run: |
-                  docker push ${{ secrets.ACR_LOGIN_SERVER }}/${{ secrets.ACR_NAME }}:beta
+                  VERSION=$(node -p "require('./package.json').version")
+                  docker push ${{ secrets.ACR_LOGIN_SERVER }}/${{ secrets.ACR_NAME }}:$VERSION
+                  docker push ${{ secrets.ACR_LOGIN_SERVER }}/${{ secrets.ACR_NAME }}:latest
