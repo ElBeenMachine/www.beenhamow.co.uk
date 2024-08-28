@@ -21,11 +21,11 @@ jobs:
                   username: ${{ secrets.ACR_USERNAME }}
                   password: ${{ secrets.ACR_PASSWORD }}
 
-            # Build Docker image
-            - name: Build Docker Image
+            # Build multi-arch Docker image
+            - name: Build Multi-Arch Docker Image
               run: |
                   VERSION=$(node -p "require('./package.json').version")
-                  docker build --platform linux/arm64,linux/amd64 -t ${{ secrets.ACR_LOGIN_SERVER }}/${{ secrets.ACR_NAME }}:$VERSION .
+                  docker buildx build --platform linux/amd64,linux/arm64 -t ${{ secrets.ACR_LOGIN_SERVER }}/${{ secrets.ACR_NAME }}:$VERSION .
 
             # Tag Docker image based on branch
             - name: Tag Docker Image
