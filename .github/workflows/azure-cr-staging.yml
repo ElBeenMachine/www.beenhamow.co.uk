@@ -1,3 +1,5 @@
+---
+
 name: Build and Push to ACR
 
 on:
@@ -7,6 +9,10 @@ on:
 jobs:
     publish-staging-image:
         runs-on: ubuntu-latest
+        strategy:
+            matrix:
+                architecture: [arm, x86]
+
 
         steps:
             - uses: actions/checkout@v4
@@ -19,16 +25,16 @@ jobs:
                   username: ${{ secrets.ACR_USERNAME }}
                   password: ${{ secrets.ACR_PASSWORD }}
 
-            # Build Docker image
+            # Build Docker image for the specified architecture
             - name: Build Docker Image
               run: |
-                  VERSION=$(node -p "require('./package.json').version")
-                  docker build -t ${{ secrets.ACR_LOGIN_SERVER }}/${{ secrets.ACR_NAME }}:$VERSION-beta .
-                  docker tag ${{ secrets.ACR_LOGIN_SERVER }}/${{ secrets.ACR_NAME }}:$VERSION-beta ${{ secrets.ACR_LOGIN_SERVER }}/${{ secrets.ACR_NAME }}:beta
+                VERSION=$(node -p "require('./package.json').version")
+                docker build -t ${{ secrets.ACR_LOGIN_SERVER }}/${{ secrets.ACR_NAME }}:$VERSION-beta-${{ matrix.architecture }} .
+                docker tag ${{ secrets.ACR_LOGIN_SERVER }}/${{ secrets.ACR_NAME }}:$VERSION-beta-${{ matrix.architecture }} ${{ secrets.ACR_LOGIN_SERVER }}/${{ secrets.ACR_NAME }}:beta-${{ matrix.architecture }}
 
             # Push Docker image to ACR
             - name: Push Docker Image to ACR
               run: |
-                  VERSION=$(node -p "require('./package.json').version")
-                  docker push ${{ secrets.ACR_LOGIN_SERVER }}/${{ secrets.ACR_NAME }}:$VERSION-beta
-                  docker push ${{ secrets.ACR_LOGIN_SERVER }}/${{ secrets.ACR_NAME }}:beta
+                VERSION=$(node -p "require('./package.json').version")
+                docker push ${{ secrets.ACR_LOGIN_SERVER }}/${{ secrets.ACR_NAME }}:$VERSION-beta-${{ matrix.architecture }}
+                docker push ${{ secrets.ACR_LOGIN_SERVER }}/${{ secrets.ACR_NAME }}:beta-${{ matrix.architecture }}
