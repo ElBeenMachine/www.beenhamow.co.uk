@@ -1,39 +1,39 @@
----
+# ---
 
-name: Build and Push to ACR
+# name: Build and Push to ACR
 
-on:
-    push:
-        branches: ["staging"]
+# on:
+#     push:
+#         branches: ["staging"]
 
-jobs:
-    publish-staging-image:
-        runs-on: ubuntu-latest
-        strategy:
-            matrix:
-                architecture: [arm64, x86]
+# jobs:
+#     publish-staging-image:
+#         runs-on: ubuntu-latest
+#         strategy:
+#             matrix:
+#                 architecture: [arm64, x86]
 
-        steps:
-            - uses: actions/checkout@v4
+#         steps:
+#             - uses: actions/checkout@v4
 
-            # Login to Azure Container Registry
-            - name: Login to ACR
-              uses: azure/docker-login@v2
-              with:
-                  login-server: ${{ secrets.ACR_LOGIN_SERVER }}
-                  username: ${{ secrets.ACR_USERNAME }}
-                  password: ${{ secrets.ACR_PASSWORD }}
+#             # Login to Azure Container Registry
+#             - name: Login to ACR
+#               uses: azure/docker-login@v2
+#               with:
+#                   login-server: ${{ secrets.ACR_LOGIN_SERVER }}
+#                   username: ${{ secrets.ACR_USERNAME }}
+#                   password: ${{ secrets.ACR_PASSWORD }}
 
-            # Build Docker image for the specified architecture
-            - name: Build Docker Image
-              run: |
-                VERSION=$(node -p "require('./package.json').version")
-                docker build -t ${{ secrets.ACR_LOGIN_SERVER }}/${{ secrets.ACR_NAME }}:$VERSION-beta-${{ matrix.architecture }} .
-                docker tag ${{ secrets.ACR_LOGIN_SERVER }}/${{ secrets.ACR_NAME }}:$VERSION-beta-${{ matrix.architecture }} ${{ secrets.ACR_LOGIN_SERVER }}/${{ secrets.ACR_NAME }}:beta-${{ matrix.architecture }}
+#             # Build Docker image for the specified architecture
+#             - name: Build Docker Image
+#               run: |
+#                 VERSION=$(node -p "require('./package.json').version")
+#                 docker build -t ${{ secrets.ACR_LOGIN_SERVER }}/${{ secrets.ACR_NAME }}:$VERSION-beta-${{ matrix.architecture }} .
+#                 docker tag ${{ secrets.ACR_LOGIN_SERVER }}/${{ secrets.ACR_NAME }}:$VERSION-beta-${{ matrix.architecture }} ${{ secrets.ACR_LOGIN_SERVER }}/${{ secrets.ACR_NAME }}:beta-${{ matrix.architecture }}
 
-            # Push Docker image to ACR
-            - name: Push Docker Image to ACR
-              run: |
-                VERSION=$(node -p "require('./package.json').version")
-                docker push ${{ secrets.ACR_LOGIN_SERVER }}/${{ secrets.ACR_NAME }}:$VERSION-beta-${{ matrix.architecture }}
-                docker push ${{ secrets.ACR_LOGIN_SERVER }}/${{ secrets.ACR_NAME }}:beta-${{ matrix.architecture }}
+#             # Push Docker image to ACR
+#             - name: Push Docker Image to ACR
+#               run: |
+#                 VERSION=$(node -p "require('./package.json').version")
+#                 docker push ${{ secrets.ACR_LOGIN_SERVER }}/${{ secrets.ACR_NAME }}:$VERSION-beta-${{ matrix.architecture }}
+#                 docker push ${{ secrets.ACR_LOGIN_SERVER }}/${{ secrets.ACR_NAME }}:beta-${{ matrix.architecture }}
