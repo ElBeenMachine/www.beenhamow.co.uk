@@ -21,10 +21,11 @@ jobs:
                   username: ${{ secrets.ACR_USERNAME }}
                   password: ${{ secrets.ACR_PASSWORD }}
 
-            # Build multi-arch Docker image using qcow2 driver
-            - name: Build Multi-Arch Docker Image
+            # Build Docker image
+            - name: Build Docker Image
               run: |
-                  docker buildx build --platform linux/amd64,linux/arm64 --driver qcow2 -t ${{ secrets.ACR_LOGIN_SERVER }}/${{ secrets.ACR_NAME }}:$VERSION .
+                  VERSION=$(node -p "require('./package.json').version")
+                  docker build --platform linux/arm64 -t ${{ secrets.ACR_LOGIN_SERVER }}/${{ secrets.ACR_NAME }}:$VERSION .
 
             # Tag Docker image based on branch
             - name: Tag Docker Image
