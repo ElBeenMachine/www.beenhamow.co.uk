@@ -12,13 +12,13 @@ jobs:
 
         steps:
             - name: "Checkout source code"
-              uses: "actions/checkout@v4"
+              uses: "actions/checkout@v2"
               with:
                   ref: ${{ github.ref }}
             - name: "cat package.json"
               run: cat ./package.json
             - name: "Setup Node.js"
-              uses: "actions/setup-node@v4"
+              uses: "actions/setup-node@v1"
               with:
                   node-version: 20
             - name: "Automated Version Bump"
