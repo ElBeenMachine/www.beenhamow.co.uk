@@ -25,7 +25,7 @@ export default <ProjectStructureProps>{
 		"DNS/DHCP",
 	],
 	website: undefined,
-	github: "https://github.beenhamow.co.uk",
+	github: "https://github.beenhamow.co.uk/homelab",
 	repoName: "ElBeenMachine/homelab",
 	image: "https://joekarlsson.com/wp-content/uploads/2023/09/DALL·E-2023-09-26-12.56.21-An-homelab-server-in-the-style-of-vaporwave-style.jpg",
 	date: new Date("2004-03-17"),
