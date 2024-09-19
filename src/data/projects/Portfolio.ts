@@ -1,20 +1,26 @@
 import { ProjectStructureProps } from "@/interfaces/Project.interface";
 
 export default <ProjectStructureProps>{
-    id: "my-portfolio",
-    title: "Personal Portfolio",
-    summary: "This very website...",
+	id: "my-portfolio",
+	title: "Personal Portfolio",
+	summary: "This very website...",
 
-    description: `This project is my personal website, designed to showcase my skills and experience as a developer. Built for a seamless user experience across devices, the website utilizes responsive design principles to adapt its layout for optimal viewing on desktops, tablets, and mobile phones.
+	description: `My portfolio, hosted at www.beenhamow.co.uk, is designed to showcase some of the projects that I have worked on, both inside of my studies, and my free time. It is created in TypeScript, using the next.js library, as well as Tailwind CSS. 
 
-    To efficiently manage the website's content, I implemented dynamic project loading. This allows me to easily add new projects without requiring full website updates. A dedicated contact form enables visitors to reach out directly, without exposing my personal email.
+    I have utilised CI/CD pipelines to publish the website to my private azure container registry, and then to update the image on my personal Kubernetes cluster, ensuring the latest version of the website is always being served. While not complete, I am also developing a dashboard which will allow me to update the contents of the website without having to update the code, using persistent hosted database storage. 
+`,
 
-    The website is published to Docker Hub, a robust platform for containerized applications. Leveraging a GitHub pipeline automates the publishing process, ensuring the website consistently reflects my latest work. This combination of technologies fosters efficiency and ensures a user-friendly platform for showcasing my technical expertise.`,
-
-    technologies: ["Next.JS", "TypeScript", "React", "TailwindCSS", "CI/CD", "Docker"],
-    website: "https://www.beenhamow.co.uk",
-    github: "https://github.beenhamow.co.uk/www.beenhamow.co.uk",
-    repoName: "ElBeenMachine/www.beenhamow.co.uk",
-    image: "/img/meta/default.png",
-    date: new Date("2004-03-17"),
+	technologies: [
+		"Next.JS",
+		"TypeScript",
+		"React",
+		"TailwindCSS",
+		"CI/CD",
+		"Docker",
+	],
+	website: "https://www.beenhamow.co.uk",
+	github: "https://github.beenhamow.co.uk/www.beenhamow.co.uk",
+	repoName: "ElBeenMachine/www.beenhamow.co.uk",
+	image: "/img/meta/default.png",
+	date: new Date("2004-03-17"),
 };
