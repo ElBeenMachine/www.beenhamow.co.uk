@@ -1,3 +1,2 @@
-# My Personal Portfolio
-
-This is the source code for my personal portfolio. If you would like to get in touch, please use the contact form [here](https://www.beenhamow.co.uk/contact-me) or send an email to [hello@beenhamow.co.uk](mailto:hello@beenhamow.co.uk)
+> [!note]
+> This project has since been migrated to my personal GitLab instance. It's presence on GitHub serves solely as an archive for version 1 of the portfolio. The new project is available at [https://gitlab.beantech.uk/my-portfolio/my-portfolio](https://gitlab.beantech.uk/my-projects/my-portfolio)
